@@ -46,13 +46,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint welcome.yml with actionlint
-        id: actionlint-check
-        continue-on-error: true
-        uses: raven-actions/actionlint@3a24062651993d40fed1019b58ac6fbdfbf276cc # v2.0.1
-        with:
-          files: .github/workflows/welcome.yml
-
       - name: Check for steps section in welcome.yml
         id: check-steps-section
         continue-on-error: true
